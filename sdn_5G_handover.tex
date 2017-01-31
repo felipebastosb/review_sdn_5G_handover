@@ -28,35 +28,20 @@
 \maketitle
 
 \begin{abstract}
-  This meta-paper describes the style to be used in articles and short papers
-  for SBC conferences. For papers in English, you should add just an abstract
-  while for the papers in Portuguese, we also ask for an abstract in
-  Portuguese (``resumo''). In both cases, abstracts should not have more than
-  10 lines and must be in the first page of the paper.
+  
+  In this paper will be make a brief introduction to SDN and 5G networks. After a proposal of of handover system will be done and analized.
+  
+  
 \end{abstract}
      
-\begin{resumo} 
-  Este meta-artigo descreve o estilo a ser usado na confecção de artigos e
-  resumos de artigos para publicação nos anais das conferências organizadas
-  pela SBC. É solicitada a escrita de resumo e abstract apenas para os artigos
-  escritos em português. Artigos em inglês deverão apresentar apenas abstract.
-  Nos dois casos, o autor deve tomar cuidado para que o resumo (e o abstract)
-  não ultrapassem 10 linhas cada, sendo que ambos devem estar na primeira
-  página do artigo.
-\end{resumo}
-
 
 \section{Introduction}
+With the rapid expansion of the mobile environment there is a need to improve Internet connectivity so that the user has a better experience. The 5G technology comes with the proposal to offer greater bandwidth for mobile devices, the main motivations for the emergence of 5G are: According to estimates, seventy per cent of the world's population will use mobile devices, Emergence of new enterprises in which they demanded a higher quality of service, as, information of all things, deep learning of the machine, support things, digital assistants keeping conversation with clients, augmented reality, 3D printing, intra body networks. The requirements for implementing 5G networks are the flexibility and scalability of the network, and a less costly processing and memory demand beyond greater energy efficiency than its predecessor. In order to improve 5G, it is necessary to use new network architectures such as Software Defined Networking (SDN) and Network Functions Virtualization (NFV).
 
-All full papers and posters (short papers) submitted to some SBC conference,
-including any supporting documents, should be written in English or in
-Portuguese. The format paper should be A4 with single column, 3.5 cm for upper
-margin, 2.5 cm for bottom margin and 3.0 cm for lateral margins, without
-headers or footers. The main font must be Times, 12 point nominal size, with 6
-points of space before each paragraph. Page numbers must be suppressed.
+The most successful initiative in this regard was undoubtedly the interface and the Openflow protocol. With Openflow, the routing elements provide a simple programming interface, which allows them to extend access and control of the query table used by the hardware to determine the next step of each received packet. In this way, the routing continues to be efficient, since the query to the routing table remains a task of the hardware, but the decision on how each package should be processed can be transferred to a level superior, where different features can be added. This structure allows the network to be extensively controlled through, expressed in software. This new paradigm was called Software Defined Networks (SDN). NFV is the support for defining services such as VPN, WAN, intrusion detection, firewall and so on. It is about virtualizing functions that were previously performed by physical devices. Now they can be defined by software, and can be adapted to various types of network equipment and standard servers in the market, thus becoming revenue generating services.
 
-Full papers must respect the page limits defined by the conference.
-Conferences that publish just abstracts ask for \textbf{one}-page texts.
+Both the network and the virtualization of its functions are related. NFV is complementary to SDN, but does not depend on it, or contrariwise. NFV can be implemented without SDN. NFV can be implemented without an SDN; however, the two concepts and solutions are combined for more efficiency and mutually beneficial. But, in reality, SDN makes the NFV more attractive because a software-defined network contributes to the automation of its infrastructure, which allows policy-based decisions to orchestrate network traffic. And respectively, the virtualization of network functions acts directly on the services ensures their capacity, aligned with the virtualized elements.
+
 
 \section{Background SDN and NFV} \label{sec:sdn}
 \subsection{SDN}
@@ -120,9 +105,6 @@ In the context of future mobile networks , SDN and NFV concepts are present in a
 
 Some authors recomend a smooth and careful transition from the current networks to the future ones, as an example, adopting a 3-step approach trying to reduce the devaluation of the legacy network structure. In other hand, several authors are paying attemption to the mobility support in a SDN-based architecture through removing the  GTP-U protocol at UP, keeping the 3GPP unchanged and the use of legacy nodes or focusing in the mobility handling trying to find implementation challenges like session continuity. 
 
-\subsection{Subsections}
-
-The subsection titles must be in boldface, 12pt, flush left.
 
 \section{System Architecture}
 
@@ -141,97 +123,65 @@ In the AC there is SDN controller that acts as an interface between LTE CP and U
 
 \section{Handover Procedure}
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
+In this implementation, the handover procedure in this way:
+
+Whem the signal aovercomes a threshold the device send a notificantion to the node of the network , so this node made a handover request to a node with a stronger signal.
+
+If the new node have resources to support the device it sends a handover ACK and the old node begins to forward the resources of the device to the new node. At this moment, for a short period of time the device can not send or receive any packge.
+
+When the device finish to synchronizes with the new node it send a handover confirmation and it begins again to receve and sed packges.
+
 
 \section{SDN-Based Mobility Support}
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
+The PMIPFlow architecture, which provides a solution for mobility management in software defined networks. The proposal was inspired by NetLMM protocols (Network-Based Localized Mobility Management) and PMIPv6 (Proxy Mobile IPv6), Which free the mobile device from mobility-related functions and delegate to the network the task of changing the handover of the device due to its movement or due to the search for better channels.
+The PMIPFlow is divided into two main parts: OMAG (OpenFlow Mobility Access Gateway) and PMIPFLow-LMA (PMIPFlow - Localized Mobility Anchor) the latter is an application running on the OpenFlow controller (LMA-NOX). In this architecture, each cell, served by an OMAG, forms the so-called PMIPFlow domain. OMAG is a mobility agent, which resides at the edge of the OpenFlow network, monitoring the user's path in its coverage area, if any user leaves your domain, it should trigger the PMIPFlow-LMA informing the event of this event. OMAG can also start the handover procedure for a user who is about to leave the network coverage area.
+LMA-NOX is a special controller in which the PMIPFlow-LMA application is executed. PMIPFLow-LMA has functions such as: creating rules on OpenFlow switches to meet the mobility needs of OMAG customers, receive and process PBU (Proxy Binding Update) messages, send PBA (Proxy Binding Ack) messages to the mobile node and serve as an access server, preventing unauthorized users.
+PMIPFlow-LMA was developed from the concept of AML in PMIPv6, but with modifications to transform it into a controller component, Instead of creating IP tunnels, Such as the LMA in the PMIP, the PMIPFLow-LMA receives the PBU, creates rules in the routing table of the OpenFlow switch and sends the PBA back to the OMAGS.
+In addition to OMAG and PMIPFlow-LMA, it is possible to verify that there are PMIPFlow gateways in the architecture. These gateways serve as the OpenFlow exit point of the PMIPFlow domain. The proposal can be extended both in terms of adding new users and in terms of network core expansion, because if the network core grows, With the inclusion of OpenFlow elements, the operation of the OMAGs and the PMIPFlow-LMA, Not be affected by being at the edge of the network.
+PMIPFlow can run concurrently with other controller applications without interfering with network operation, because, it is possible to create specialized slices for mobile clients and separate slices of mobile clients from the slices of fixed clients. The OpenFlow switch forms the core of the PMIPFlow SDN network, in it, routing rules are installed, network slices are created, traffic prioritization. Finally, all SDN operations. It is the element that PMIPFlow-LMA will control during PMIPFlow operations.
+
 
 \section{Results and discussions}
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
+\subsection{Experimental setup}
+
+A simulation of the architecture described in this work were done in NS-3 with the OpenFlow module.
+
+The topology of the network simuleted is in the figure below.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.7\textwidth]{topology.png}
+	\caption{Topology}
+	\label{figure 5: Topology}
+\end{figure}
+
+\subsection{Handover execution time}
+
+As a result of the simulation we will analize the handover preparation and completion time.
+
+Here we have a graphic os the handover times acording to the data rate.
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.7\textwidth]{handover.png}
+	\caption{Topology}
+	\label{figure 6: Handover times}
+\end{figure}
 
 \section{Conclusions}
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
-
-\section{Figures and Captions}\label{sec:figs}
-
-
-Figure and table captions should be centered if less than one line
-(Figure~\ref{fig:exampleFig1}), otherwise justified and indented by 0.8cm on
-both margins, as shown in Figure~\ref{fig:exampleFig2}. The caption font must
-be Helvetica, 10 point, boldface, with 6 points of space before and after each
-caption.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.5\textwidth]{fig1.jpg}
-\caption{A typical figure}
-\label{fig:exampleFig1}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.3\textwidth]{fig2.jpg}
-\caption{This figure is an example of a figure caption taking more than one
-  line and justified considering margins mentioned in Section~\ref{sec:figs}.}
-\label{fig:exampleFig2}
-\end{figure}
-
-In tables, try to avoid the use of colored or shaded backgrounds, and avoid
-thick, doubled, or unnecessary framing lines. When reporting empirical data,
-do not use more decimal digits than warranted by their precision and
-reproducibility. Table caption must be placed before the table (see Table 1)
-and the font used must also be Helvetica, 10 point, boldface, with 6 points of
-space before and after each caption.
-
-\begin{table}[ht]
-\centering
-\caption{Variables to be considered on the evaluation of interaction
-  techniques}
-\label{tab:exTable1}
-\smallskip
-\begin{tabular}{|l|c|c|}
-\hline
-& Value 1 & Value 2\\[0.5ex]
-\hline
-&&\\[-2ex]
-Case 1 & 1.0 $\pm$ 0.1 & 1.75$\times$10$^{-5}$ $\pm$ 5$\times$10$^{-7}$\\[0.5ex]
-\hline
-&&\\[-2ex]
-Case 2 & 0.003(1) & 100.0\\[0.5ex]
-\hline
-\end{tabular}
-\end{table}
-
-\section{Images}
-
-All images and illustrations should be in black-and-white, or gray tones,
-excepting for the papers that will be electronically available (on CD-ROMs,
-internet, etc.). The image resolution on paper should be about 600 dpi for
-black-and-white images, and 150-300 dpi for grayscale images.  Do not include
-images with excessive resolution, as they may take hours to print, without any
-visible difference in the result. 
+With this results we can conclude that this proposal works fine with the 4G constraints with a handover preparation time around 6,94ms and a handover procedure execution time around 8,31ms.
 
 \section{References}
       Hamid F, HyunYong L and Akihiro N, ’Software-Defined Networking: A survey’, Computer Networks, 2015.
 
       Garzon J, Adamuz-Hinojosa O, Ameigeiras P, ’Handover Implementation in a 5G SDN-based Mobile Network Architecture’, PIMRC: Mobile and Wireless Networks, 2016
 
-\bibliographystyle{sbc}
-\bibliography{sbc-template}
+      Akram H, Aniruddha G, ’Software-Defined Networking: Challenges and research opportunities for Future Internet’, Computer Networks, 2015.
+
+      Nunes B, Marc M,’A Survey of Software-Defined Networking: Past, Present, and Future of Programmable Networks’, IEEE Communications surveys and tutorials, vol. 16, No. 3, Third quarter 2014.
 
 \end{document}
