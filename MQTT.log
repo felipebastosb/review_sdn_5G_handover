@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.30)  31 JAN 2017 00:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.30)  18 FEB 2017 23:15
 entering extended mode
-**./sdn_5G_handover.tex
-(sdn_5G_handover.tex
+**./MQTT.tex
+(MQTT.tex
 LaTeX2e <2017/01/01> patch level 1
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -444,9 +444,8 @@ Now handling font encoding U ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-))
-(sdn_5G_handover.aux)
-\openout1 = `sdn_5G_handover.aux'.
+)) (MQTT.aux)
+\openout1 = `MQTT.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -461,7 +460,8 @@ LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 26.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -564,7 +564,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 28.
 
-Overfull \hbox (17.9897pt too wide) in paragraph at lines 28--28
+Overfull \hbox (137.3716pt too wide) in paragraph at lines 28--28
  [][] 
  []
 
@@ -572,89 +572,54 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 28.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 28.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspcr.fd"
-File: omspcr.fd 
-)
-LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
-
-Overfull \hbox (27.20868pt too wide) in paragraph at lines 28--28
- [][] 
- []
+! Undefined control sequence.
+<recently read> \felipe 
+                        
+l.28 \maketitle
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 30.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
-[1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<figure1.png, id=12, 1011.78pt x 633.36626pt>
+<figure1.png, id=1, 1011.78pt x 633.36626pt>
 File: figure1.png Graphic file (type png)
  <use figure1.png>
-Package pdftex.def Info: figure1.png used on input line 59.
+Package pdftex.def Info: figure1.png used on input line 49.
 (pdftex.def)             Requested size: 298.75264pt x 187.01538pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 60.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 50.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 60.
- [2]
-<figure2.png, id=17, 1011.78pt x 799.98875pt>
-File: figure2.png Graphic file (type png)
- <use figure2.png>
-Package pdftex.def Info: figure2.png used on input line 68.
-(pdftex.def)             Requested size: 298.75264pt x 236.21436pt.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 50.
+ [1
 
-<figure3.png, id=18, 1011.78pt x 785.93625pt>
-File: figure3.png Graphic file (type png)
- <use figure3.png>
-Package pdftex.def Info: figure3.png used on input line 77.
-(pdftex.def)             Requested size: 298.75264pt x 232.06505pt.
- [3 <./figure1.png> <./figure2.png>] [4 <./figure3.png>]
-<figurejamelly.png, id=29, 506.89375pt x 343.2825pt>
-File: figurejamelly.png Graphic file (type png)
- <use figurejamelly.png>
-Package pdftex.def Info: figurejamelly.png used on input line 115.
-(pdftex.def)             Requested size: 298.75264pt x 202.32538pt.
-
-[5] [6 <./figurejamelly.png>] <topology.png, id=36, 770.12718pt x 577.40718pt>
-File: topology.png Graphic file (type png)
-
-<use topology.png>
-Package pdftex.def Info: topology.png used on input line 155.
-(pdftex.def)             Requested size: 298.75264pt x 223.98967pt.
- <handover.png, id=37, 729.47531pt x 374.14781pt>
-File: handover.png Graphic file (type png)
-
-<use handover.png>
-Package pdftex.def Info: handover.png used on input line 169.
-(pdftex.def)             Requested size: 298.75264pt x 153.23032pt.
- [7] [8 <./topology.png> <./handover.png>]
-(sdn_5G_handover.aux) ) 
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./figure1.png>] [2] (MQTT
+.aux) ) 
 Here is how much of TeX's memory you used:
- 3427 strings out of 493333
- 45998 string characters out of 3139188
- 123490 words of memory out of 3000000
- 6877 multiletter control sequences out of 15000+200000
- 21033 words of font info for 44 fonts, out of 3000000 for 9000
+ 3378 strings out of 493333
+ 45004 string characters out of 3139188
+ 119340 words of memory out of 3000000
+ 6837 multiletter control sequences out of 15000+200000
+ 19897 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,28p,1230b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
-}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/t
-imes/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sdn_5G_handover.pdf (8 pages, 689788 bytes).
+ 39i,10n,28p,410b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utm
+b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on MQTT.pdf (2 pages, 123561 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 37 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
